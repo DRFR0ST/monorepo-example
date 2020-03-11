@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lerna run build",
+    "build-a": "cd packages/workspace_a && yarn build",
+    "build-b": "cd packages/workspace_b && yarn build",
+    "start-a": "cd packages/workspace_a && node ./dist/index.js",
+    "start-b": "cd packages/workspace_b && node ./dist/index.js"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "name": "monorepo_example",
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
